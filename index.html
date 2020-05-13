@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo app</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="part-1">
+        <h1>Todo App</h1>
+        <textarea
+          name=""
+          id="todo"
+          maxlength="65"
+          placeholder="Enter todo text..."
+        ></textarea
+        ><br /><br />
+        <button id="submit">Create</button>
+      </div>
+      <div id="part-2">
+        <ol id="list"></ol>
+      </div>
+      <script src="./js/uuidv4.js"></script>
+      <script src="./js/moment.min.js"></script>
+      <script src="./js/main.js"></script>
+    </div>
+  </body>
+</html>
