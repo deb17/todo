@@ -1,5 +1,8 @@
 const addUpd = (e) => {
   const ele = document.querySelector('#todo')
+
+  if (!ele.value.trim()) return
+
   const op = e.target.textContent
   if (op === 'Create') {
     todos.splice(0, 0, {
@@ -31,10 +34,14 @@ const render = () => {
   const list = document.querySelector('#list')
   list.innerHTML = ''
   if (todos.length === 0) {
-    document.querySelector('#part-2').innerHTML =
-      '<h3>There are no todos yet.</h3>'
+    h3 = document.querySelector('h3')
+    h3.textContent = 'There are no todos yet.'
     return
   }
+
+  h3 = document.querySelector('h3')
+  h3.textContent = ''
+
   todos.forEach((todo) => {
     const li = document.createElement('li')
     li.innerHTML =
@@ -46,16 +53,19 @@ const render = () => {
       moment(todo.date).fromNow() +
       '</span>'
     li.dataset.id = todo.id
+
     const e1 = document.createElement('img')
     e1.src = './img/edit.svg'
     e1.title = 'Edit'
     e1.addEventListener('click', updateTodo)
     li.appendChild(e1)
+
     const e2 = document.createElement('img')
     e2.src = './img/x.svg'
     e2.title = 'Delete'
     e2.addEventListener('click', deleteTodo)
     li.appendChild(e2)
+
     const cbox = document.createElement('input')
     cbox.type = 'checkbox'
     cbox.title = 'Done'
@@ -66,6 +76,7 @@ const render = () => {
     }
     cbox.addEventListener('change', completed)
     li.appendChild(cbox)
+
     list.appendChild(li)
   })
 }
