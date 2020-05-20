@@ -44,7 +44,7 @@ ol {
 
 @media (max-width: 576px) {
   ol {
-    padding-left: 20px;
+    padding-left: 15px;
   }
 }
 
@@ -52,9 +52,10 @@ li {
   width: 300px;
   height: 90px;
   background-color: wheat;
-  border: 2px ridge gray;
+  border: 1px solid gray;
   border-radius: 5px;
-  margin: 10px;
+  box-shadow: 0 0 10px whitesmoke;
+  margin: 15px 10px;
   padding: 5px;
   font-size: 1.2rem;
   position: relative;
