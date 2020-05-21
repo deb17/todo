@@ -50,7 +50,7 @@ ol {
 
 li {
   width: 300px;
-  height: 90px;
+  min-height: 90px;
   background-color: wheat;
   border: 1px solid gray;
   border-radius: 5px;
@@ -79,6 +79,7 @@ li::before {
 .li-text {
   display: inline-block;
   width: 70%;
+  margin-bottom: 1rem;
   vertical-align: text-top;
   word-wrap: break-word;
 }
